@@ -4,7 +4,6 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -227,6 +226,12 @@ Tayfun Gülcan - [@Tayfuuu](https://twitter.com/Tayfuuu)
 * [Jest](https://jestjs.io)
 * [Sendgrid](https://sendgrid.com/)
 
+## recommended sources
+
+<a target="_blank"  href="https://www.amazon.de/gp/product/B08BV4TPXD/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=B08BV4TPXD&linkCode=as2&tag=kopfundgeist-21&linkId=f0cf7b617e43f6fad63f342a0952c4be"><img border="0" src="//ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=DE&ASIN=B08BV4TPXD&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL160_&tag=kopfundgeist-21" ></a><img src="//ir-de.amazon-adsystem.com/e/ir?t=kopfundgeist-21&l=am2&o=3&a=B08BV4TPXD" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a target="_blank"  href="https://www.amazon.de/gp/product/1680501747/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=1680501747&linkCode=as2&tag=kopfundgeist-21&linkId=5e8e6029243ef71110c346ee0d1fea26"><img border="0" src="//ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=DE&ASIN=1680501747&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL160_&tag=kopfundgeist-21" ></a><img src="//ir-de.amazon-adsystem.com/e/ir?t=kopfundgeist-21&l=am2&o=3&a=1680501747" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a target="_blank"  href="https://www.amazon.de/gp/product/B07TWDNMHJ/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=B07TWDNMHJ&linkCode=as2&tag=kopfundgeist-21&linkId=3827cc7a30af48b0efdd6a492f7974a8"><img border="0" src="//ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=DE&ASIN=B07TWDNMHJ&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL160_&tag=kopfundgeist-21" ></a><img src="//ir-de.amazon-adsystem.com/e/ir?t=kopfundgeist-21&l=am2&o=3&a=B07TWDNMHJ" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a target="_blank"  href="https://www.amazon.de/gp/product/1617292427/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=1617292427&linkCode=as2&tag=kopfundgeist-21&linkId=c1f483714cfc05f1fce1a57f24f19b14"><img border="0" src="//ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=DE&ASIN=1617292427&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL160_&tag=kopfundgeist-21" ></a><img src="//ir-de.amazon-adsystem.com/e/ir?t=kopfundgeist-21&l=am2&o=3&a=1617292427" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />  
 
 [contributors-shield]: https://img.shields.io/github/contributors/tguelcan/restexpress.svg?style=flat-square
 [contributors-url]: https://github.com/tguelcan/restexpress/graphs/contributors
