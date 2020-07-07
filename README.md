@@ -16,10 +16,9 @@
   <p align="center">
     RESTexpress is a highly customizable REST backend and API generator.
     <br />
-    <a href="https://github.com/tguelcan/restexpress"><strong>Explore the docs »</strong></a>
+    <a href="https://restexpress.dev/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/tguelcan/restexpress">View Demo</a>
     ·
     <a href="https://github.com/tguelcan/restexpress/issues">Report Bug</a>
     ·
