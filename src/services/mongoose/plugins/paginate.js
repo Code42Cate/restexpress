@@ -10,6 +10,7 @@
 export default function paginate(schema, { rules }) {
     schema.statics.paginate = async function({ query, cursor, select: userSelect }, options) {
         try {
+
             const wantedFields = Object.keys(userSelect).filter(field => userSelect[field] === 1)
             const { role } = options?.user ?? { role: 'guest' }
             const populate = options?.populate ?? []
@@ -25,22 +26,18 @@ export default function paginate(schema, { rules }) {
             const select = {}
             // create intersection between view and wantedFields,
             // then exclude the nested fields and select those that are left
-            view.filter(v => wantedFields.includes(v))
-                .filter(v => !v.includes('.'))
-                .forEach(key => {
-                    select[key] = 1
-                })
+            view.filter(v => wantedFields.includes(v)).filter(v => !v.includes('.')).forEach(key => {
+                select[key] = 1
+            })
 
-            populate.forEach(e => {
-                const populateView = view.filter(v => v.startsWith(`${e.path}.`))
+            populate.forEach((e) => {
+                const populateView = view.filter((v) => v.startsWith(`${e.path}.`))
                 e.select = {}
                 populateView.forEach(key => {
                     e.select[key.split('.')[1]] = 1
                 })
             })
-            if (Object.keys(select).length === 0) {
-                view.forEach(v => (select[v] = 1))
-            }
+
 
             const [count, rows] = await Promise.all([
                 this.countDocuments(query),
@@ -59,6 +56,7 @@ export default function paginate(schema, { rules }) {
                 prevPage,
                 page
             }
+
         } catch (err) {
             console.log(err)
             return {}
