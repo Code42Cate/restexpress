@@ -18,7 +18,7 @@ export const show = async ({ user: { _id, role }, method, params: { id } }, res)
         const user = await User.findById(id === 'me' ? _id : id)
 
         if (!user) {
-            res.status(NOT_FOUND).json({ valid: false, message: res.__('not-found')})
+            res.status(NOT_FOUND).json({ valid: false, message: res.__('not-found') })
             return
         }
 
@@ -30,8 +30,7 @@ export const show = async ({ user: { _id, role }, method, params: { id } }, res)
 
 export const create = async ({ bodymen: { body }, method, user }, res, next) => {
     try {
-
-        if (await User.findOne({ email: body.email }) !== null) {
+        if ((await User.findOne({ email: body.email })) !== null) {
             res.status(CONFLICT).json({ valid: false, message: res.__('email-conflict') })
             return
         }
@@ -53,12 +52,12 @@ export const update = async ({ bodymen: { body }, params, user, method }, res, n
         const doc = await User.findById(params.id)
 
         if (!doc) {
-            res.status(NOT_FOUND).json({ valid: false, message: res.__('not-found')})
+            res.status(NOT_FOUND).json({ valid: false, message: res.__('not-found') })
             return
         }
 
         if (!User.isOwner(doc, user)) {
-            res.status(FORBIDDEN).json({ valid: false, message: res.__('missing-permission')})
+            res.status(FORBIDDEN).json({ valid: false, message: res.__('missing-permission') })
             return
         }
 
@@ -75,12 +74,12 @@ export const updatePassword = async ({ bodymen: { body }, params, user }, res, n
         const doc = await User.findById(params.id)
 
         if (!doc) {
-            res.status(NOT_FOUND).json({ valid: false, message: res.__('not-found')})
+            res.status(NOT_FOUND).json({ valid: false, message: res.__('not-found') })
             return
         }
 
         if (!User.isOwner(doc, user)) {
-            res.status(FORBIDDEN).json({ valid: false, message: res.__('missing-permission')})
+            res.status(FORBIDDEN).json({ valid: false, message: res.__('missing-permission') })
             return
         }
 
@@ -97,16 +96,16 @@ export const destroy = async ({ user, params: { id } }, res, next) => {
         const doc = await User.findById(id)
 
         if (!doc) {
-            res.status(NOT_FOUND).json({ valid: false, message: res.__('not-found')})
+            res.status(NOT_FOUND).json({ valid: false, message: res.__('not-found') })
             return
         }
 
         if (!User.isOwner(doc, user)) {
-            res.status(FORBIDDEN).json({ valid: false, message: res.__('missing-permission')})
+            res.status(FORBIDDEN).json({ valid: false, message: res.__('missing-permission') })
             return
         }
 
-        await User.deleteOne({ _id: id})
+        await User.deleteOne({ _id: id })
 
         res.status(NO_CONTENT).end()
     } catch (error) {

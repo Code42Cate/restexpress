@@ -109,8 +109,6 @@ router.post('/logout', logout)
  */
 router.post('/logout/all', logoutAll)
 
-
-
 /**
  * @swagger
  * path:
@@ -161,7 +159,7 @@ router.post('/logout/all', logoutAll)
 router.post(
     '/:provider',
     body({
-        token: {
+        accessToken: {
             type: String,
             required: true
         }

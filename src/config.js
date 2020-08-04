@@ -41,8 +41,7 @@ const config = {
                 info: {
                     title: 'RESTexpress',
                     version: '1.0.0',
-                    description:
-                    'RESTexpress is a highly customizable REST backend and API generator',
+                    description: 'RESTexpress is a highly customizable REST backend and API generator',
                     license: {
                         name: 'MIT',
                         url: 'https://github.com/tguelcan/restexpress/blob/master/LICENSE'
@@ -69,7 +68,7 @@ const config = {
     },
     test: {
         mongo: {
-            uri: 'mongodb://localhost/testgenerator-test',
+            uri: 'mongodb://localhost/sobmit-test',
             options: {
                 debug: false,
                 useCreateIndex: true,
@@ -81,7 +80,7 @@ const config = {
     },
     development: {
         mongo: {
-            uri: 'mongodb://localhost/testgenerator-dev',
+            uri: 'mongodb://localhost/sobmit-dev',
             options: {
                 debug: true,
                 useCreateIndex: true,
@@ -95,7 +94,7 @@ const config = {
         ip: process.env.IP || undefined,
         port: process.env.PORT || 8080,
         mongo: {
-            uri: process.env.MONGODB_URI || 'mongodb://localhost/testgenerator',
+            uri: process.env.MONGODB_URI || 'mongodb://localhost/sobmit',
             options: {
                 debug: true,
                 useCreateIndex: true,

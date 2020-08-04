@@ -64,6 +64,7 @@
 		"rand-token": "^1.0.1",
 		"request": "^2.88.2",
 		"request-promise": "^4.2.5",
+		"shortid": "^2.2.15",
 		"swagger-jsdoc": "^4.0.0",
 		"swagger-ui-express": "^4.1.4"
 	},
