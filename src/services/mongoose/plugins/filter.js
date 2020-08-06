@@ -15,8 +15,25 @@ export default function select(schema, { rules }) {
         const { permissions } = rules.find(p => p.group === role) ?? []
 
         const view = permissions.find(rule => rule.methods.includes(method)).view ?? []
-
-        const obj = view.reduce((a,b) => (a[b] = this[b], a), {})
+        /*
+            view = ['content', 'author', 'author.name', 'author.email']
+            should be:
+            root = ['content', 'author']
+            populate: {
+                author: ['name', 'email']
+            }
+        */
+        const root = view.filter(e => !e.includes('.'))
+        const populateRoot = [...new Set(view.filter(e => e.includes('.')).map(e => e.split('.')[0]))]
+        const populate = {}
+        populateRoot.forEach((key) => {
+            populate[key] = view.filter(e => e.startsWith(`${key}.`)).map(e => e.split('.')[1])
+        })
+        const obj = root.reduce((a,b) => (a[b] = this[b], a), {})
+        console.log(populate)
+        Object.keys(populate).forEach((key) => {
+            obj[key] = populate[key].reduce((a, b) => (a[b] = this[key][b], a), {})
+        })
 
         return obj
     }

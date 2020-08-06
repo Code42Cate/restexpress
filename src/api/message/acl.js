@@ -17,7 +17,7 @@ const permissions = [
                 resource: 'messages/*',
                 methods: ['GET', 'POST', 'PUT', 'DELETE'],
                 action: 'allow',
-                view: ['content', 'author', 'author.name', 'author.email']
+                view: ['content', 'author', 'author.name', 'author.email', 'author._id']
             }
         ]
     },
@@ -28,7 +28,7 @@ const permissions = [
                 resource: 'messages/*',
                 methods: ['GET', 'POST', 'PUT', 'DELETE'],
                 action: 'allow',
-                view: ['content', 'author', 'author.name', 'author.email']
+                view: ['content', 'author', 'author.name', 'author.email', 'author._id']
             }
         ]
     }
