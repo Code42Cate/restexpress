@@ -18,7 +18,7 @@ const router = new Router()
 /**
  * @swagger
  * path:
- *  api/messages/:
+ *  /api/messages/:
  *    post:
  *      summary: Create a new Message
  *      tags: [Messages]
@@ -60,7 +60,7 @@ router.post(
 /**
  * @swagger
  * path:
- *  api/messages/:
+ *  /api/messages/:
  *    get:
  *      summary: Get messages
  *      tags: [Messages]
@@ -79,7 +79,7 @@ router.get('/', query(), index)
 /**
  * @swagger
  * path:
- *  api/messages/{messageId}:
+ *  /api/messages/{messageId}:
  *    get:
  *      summary: Get Message
  *      tags: [Messages]
@@ -107,7 +107,7 @@ router.get('/:id', show)
 /**
  * @swagger
  * path:
- *  api/messages/{messageId}:
+ *  /api/messages/{messageId}:
  *    put:
  *      summary: Update message
  *      tags: [Messages]
@@ -146,7 +146,7 @@ router.put('/:id', body({ content }), update)
 /**
  * @swagger
  * path:
- *  api/messages/{messageId}:
+ *  /api/messages/{messageId}:
  *    delete:
  *      summary: Delete message
  *      tags: [Messages]
